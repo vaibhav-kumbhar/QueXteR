@@ -130,7 +130,10 @@ def ChangePassword(request):
 def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
 	return ''.join(random.choice(chars) for _ in range(size))
 def NewUserRegister(request):
-	logout(request)
+	try:
+		logout(request)
+	except:
+		pass
 	if request.method=="POST":
 		form=forms.NewUserRegisterForm(request.POST)
 		if form.is_valid():
