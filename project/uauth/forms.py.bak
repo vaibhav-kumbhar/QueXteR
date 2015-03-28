@@ -1,0 +1,23 @@
+from django import forms
+
+from project.apps.data import models
+from django.forms.extras.widgets import SelectDateWidget
+from django.contrib.auth.tokens import default_token_generator
+from django.contrib.auth import authenticate, get_user_model
+from django.core.mail import send_mail
+from django.contrib.sites.models import get_current_site
+from django.utils.http import urlsafe_base64_encode
+from django.utils.encoding import force_bytes
+from django.template import loader
+import datetime
+
+class Login_Form(forms.Form):
+	username=forms.EmailField(widget=forms.TextInput(attrs={'placeholder':"Username or email"}))	
+	password=forms.CharField(widget=forms.PasswordInput(attrs={'placeholder':"Password"}))
+
+	def clean_password(self):
+		cd=self.cleaned_data
+		password=cd.get('password')
+		if len(password)<1:
+			raise forms.ValidationError("Please Enter Password")
+		return password

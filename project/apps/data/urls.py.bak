@@ -1,0 +1,4 @@
+from django.conf.urls import patterns,url
+from firstpro.apps.homepage.feeds import ArchiveFeed
+urlpatterns = patterns('project.apps.data.views',
+	url(r'^homepage$','index',name="homepage_index"),

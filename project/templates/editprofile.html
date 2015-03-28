@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block body %} 
+<div align="center"><h1>EDIT PROFILE</h1><div>
+<div>
+	<form  method="POST">
+
+		{% csrf_token %}
+			<table align="center" cellpadding = "10">
+		 
+				{{editeduser.as_table}}<br>{{editedprofile.as_table}}
+
+
+			<tr><td>
+	<div align="center"><input type="submit" class="btn btn-primary"value="Save Changes"></input></div></td></tr><br>
+	</table>
+</form>
+</div>
+{% endblock %}

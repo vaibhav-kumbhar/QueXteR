@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block body %}
+	<div class="main">
+			<ul class="cbp_tmtimeline">
+				<li>
+				<time class="cbp_tmtime" datetime="2013-04-10 18:30">{{q.date_created.date}}</time>
+					<div class="cbp_tmicon cbp_tmicon-phone"></div>
+						<div class="cbp_tmlabel">
+						<h2>{{que}}</h2>
+						<form action="" method="POST">
+						{% csrf_token %}
+							<p>Your Answer<br>
+							{{form.ans}}<br></p>
+				
+							<input type="submit" value="Submit" /></input>
+							</form>
+						</div>
+					</li>
+				</ul>
+			</div>
+{% endblock %}

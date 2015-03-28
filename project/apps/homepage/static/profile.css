@@ -1,0 +1,17 @@
+.profile-photo {
+  display: block;
+  max-width: 150px;
+ /* margin: 0 auto 30px;*/
+  border-radius: 100%;
+}
+body {background-color:white;
+		  
+		  background-repeat:no-repeat;
+		  float:center;
+		 		  
+		}
+  h3{font-family: Calibri; font-size: 22pt; font-style: normal; font-weight: bold; color:orange;
+text-align:left; text-decoration: underline; }
+/*table{font-family: Calibri; color:white; font-size: 20pt; font-style: normal; width:100%;
+text-align:left; background-color: SlateBlue; border-collapse: collapse; border: 5px solid #F30}
+table.inner{border: 5px}*/

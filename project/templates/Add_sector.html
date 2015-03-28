@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Profile Update</title>
+  <link rel='stylesheet' href='http://codepen.io/assets/libs/fullpage/jquery-ui.css'>
+
+    <link rel="stylesheet" href="/static/login_style.css"  type="text/css" />
+
+  <style type="text/css">
+  .login-card {
+  padding: 40px;
+  width: 50%;
+  background-color:white;
+  margin: 0 auto 10px;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  }
+</style>
+
+ 
+</head>
+
+<body>
+<form action="" method="POST">
+  <div class="login-card" align="center">
+  	{% csrf_token %}
+	<h4>Sectors:</h4>
+	<p>{% for sec in sec_obj %}
+	{{sec.sectornm}}{{", "}}
+	{% endfor %}</p>
+    <h1>Add New Sector</h1>
+	{{form.sector}}
+   <!-- <input type="text" name="user" placeholder="Email">
+    <input type="
+	password" name="pass" placeholder="Password">-->
+    <a href="/askque"><input type="button" name="login" class="login login-submit" value="Add Sector"></a>
+</div>
+</form>
+
+
+</body>
+
+</html>

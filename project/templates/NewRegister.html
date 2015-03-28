@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>QueXteR</title>
+  <link rel='stylesheet' href='http://codepen.io/assets/libs/fullpage/jquery-ui.css'>
+
+    <link rel="stylesheet" href="/static/login_style.css"  type="text/css" />
+
+</head>
+
+<body>
+
+  <div class="login-card" align="center">
+    <h1>New Registration</h1><br>
+	<h3 color="red">{{error}}</h3><br>
+	{% if exists %}
+		forgot password ??<a href='/password/reset'>click here</a>
+	{% endif %}
+  <form method="POST">
+  {% csrf_token %}
+        {{form.email}}{% if form.email.errors %}{{form.email.errors}}{% endif %}
+        {{form.first_name}}{% if form.first_name.errors %}{{ form.first_name.errors }}{% endif %}
+        {{form.last_name}}{% if form.last_name.errors %}{{ form.last_name.errors }}{% endif %}
+	  <input type="submit" value="Register"></input>
+	</form>
+
+</div>
+</body>
+

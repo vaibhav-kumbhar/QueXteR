@@ -1,0 +1,93 @@
+/*body {background-color:#96F;
+		  
+		  background-repeat:no-repeat;
+		 		  
+		}*/
+#inputs{
+		height:50px;
+		}
+
+#actions{
+		height:50px;
+		}
+#login {
+    box-shadow: 0 0 2px rgba(0,0,0, 0.2),  
+                0 1px 1px rgba(0, 0, 0,0.2),
+                0 3px 0 #0000F1,
+                0 4px 0 rgba(0, 0, 0,0.2),
+                0 6px 0 #0000F1,  
+                0 7px 0 rgba(0, 0, 0,0.2);
+
+}
+#Email {width:100%;
+		height:100%;
+		border-radius: 10px;  
+	
+		}
+#password {width:100%;
+		height:100%;
+		border-radius: 10px;  
+	
+		}
+
+#inputs{
+		
+
+		}
+
+#login {
+    position:fixed;
+	top:220px;
+	left:320px;
+	width:50%;
+	height:50%;
+    z-index: 0;
+}
+
+#login:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    border: 1px dashed #fff;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    box-shadow: 0 0 0 1px #7186ED;
+}
+#submit{
+		width:50%;
+		height:100%;
+		border-radius: 10px;
+		}
+h1 {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .7), 0px 2px 0 rgba(0, 0, 0, .5);
+    text-transform: uppercase;
+    text-align: center;
+    color: #F30;
+    margin: 0 0 30px 0;
+    letter-spacing: 4px;
+    font: normal 26px/1 Verdana, Helvetica;
+    position: relative;
+}
+h1:after, 
+h1:before {
+    background-color: #777;
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: 15px;
+    width: 120px;   
+}
+
+h1:after {      
+    right: 0;
+}
+
+h1:before {
+    background-image: linear-gradient(right, #777, #fff);
+    left: 0;
+}
+a { color:orange;
+}
+   
